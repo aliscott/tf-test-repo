@@ -29,3 +29,16 @@ resource "aws_lambda_function" "hello_world" {
   runtime       = "nodejs12.x"
   memory_size   = 1024 # <<<<< Try changing this to 512 to compare costs
 }
+
+module "git-module" {
+  source = "git::https://github.com/infracost/terraform-private-module-example.git"
+
+  name = "my-instance"
+
+  ami                    = "ami-ebd02392"
+  instance_type          = "t2.micro"
+  key_name               = "user1"
+  monitoring             = true
+  vpc_security_group_ids = ["sg-12345678"]
+  subnet_id              = "subnet-eddcdzz4"
+}
