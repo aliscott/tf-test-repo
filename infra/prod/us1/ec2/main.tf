@@ -9,4 +9,8 @@ provider "aws" {
 resource "aws_instance" "web_app" {
   ami           = "ami-674cbc1e"
   instance_type = "t3.xlarge"
+  ebs_block_device {
+    volume_type = "gp2"
+    volume_size = 1000
+  }
 }
