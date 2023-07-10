@@ -11,6 +11,11 @@ resource "aws_instance" "web_app" {
   instance_type = "t3.large"
 }
 
+resource "aws_ebs_volume" "test" {
+  type = "gp2"
+  size              = 40
+}
+
 module "ec2_instance" {
   source  = "git@github.com:infracost/terraform-private-module-example.git"
   version = "~> 3.0"
