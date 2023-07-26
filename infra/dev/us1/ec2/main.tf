@@ -11,7 +11,7 @@ resource "aws_instance" "web_app" {
   instance_type = "t3.large"
   root_block_device {
    type = "gp2"
-   size = 50
+   size = 100
   }
 }
 
