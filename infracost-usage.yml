@@ -3,7 +3,6 @@
 # `infracost breakdown --usage-file infracost-usage.yml [other flags]`
 # See https://infracost.io/usage-file/ for docs
 version: 0.1
-resource_usage:
-  aws_lambda_function.hello_world:
-    monthly_requests: 100000000
-    request_duration_ms: 250  # Try changing this to 100 (milliseconds) to compare costs
+resource_type_default_usage:
+  aws_db_instance:
+    additional_backup_storage_gb: 1000  # Amount of backup storage used that is in excess of 100% of the storage size for all databases in GB.
