@@ -1,0 +1,6 @@
+version: 0.1
+projects:
+- name: infra/dev/us1/ec2
+  path: infra/dev/us1/ec2
+- name: infra/dev/us1/ec2
+  path: infra/dev/us1/ec2
